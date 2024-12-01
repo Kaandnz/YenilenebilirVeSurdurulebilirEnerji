@@ -1,0 +1,85 @@
+﻿@model IEnumerable<Bloggie.Web.Models.Domain.BlogPost>
+<div class="d-flex flex-column min-vh-100">
+    <div class="d-flex flex-grow-1">
+        <!-- Sidebar -->
+        <nav id="sidebarMenu" class="sidebar bg-white">
+            <div class="position-sticky">
+                <div class="list-group list-group-flush mx-3 mt-4">
+                    <a asp-controller="Topics" asp-action="WaterEnergy" class="list-group-item list-group-item-action py-2 ripple ">
+                        <i class="fas fa-water fa-fw me-3"></i><span>Water Energy</span>
+                    </a>
+                    <a asp-controller="Topics" asp-action="WindEnergy" class="list-group-item list-group-item-action py-2 ripple">
+                        <i class="fas fa-wind fa-fw me-3"></i><span>Wind Energy</span>
+                    </a>
+                    <a asp-controller="Topics" asp-action="SolarEnergy" class="list-group-item list-group-item-action py-2 ripple">
+                        <i class="fas fa-sun fa-fw me-3"></i><span>Solar Energy</span>
+                    </a>
+                    <a asp-controller="Topics" asp-action="GeothermalEnergy" class="list-group-item list-group-item-action py-2 ripple">
+                        <i class="fas fa-mountain fa-fw me-3"></i><span>Geothermal Energy</span>
+                    </a>
+                    <a asp-controller="Topics" asp-action="BiomassEnergy" class="list-group-item list-group-item-action py-2 ripple">
+                        <i class="fas fa-leaf fa-fw me-3"></i><span>Biomass Energy</span>
+                    </a>
+                    <a asp-controller="Topics" asp-action="FutureEnergy" class="list-group-item list-group-item-action py-2 ripple mt-auto active">
+                        <i class="fas fa-globe fa-fw me-3"></i><span>The FUTURE of Renewable Energy Sources</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!-- Content -->
+        <div class="flex-grow-1 d-flex flex-column">
+            <!-- Descriptions -->
+            <div class="descriptions mt-2" style="
+    height: 700px;
+    background-image: url('https://res-console.cloudinary.com/dq0ymmgg5/media_explorer_thumbnails/49a37bf88e0be1193886a8e07e4b89ed/detailed');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px; /* Resim divinin köşelerini yuvarlar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Altına gölge ekler */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 20px;">
+
+                <!-- Yazının Bulunduğu Blur Div -->
+                <div style="
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(5px);
+        padding: 15px 30px;
+        border-radius: 8px; /* Yazı kutusunun köşelerini yuvarlar */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);">
+                    <!-- Yazı kutusuna hafif gölge ekler -->
+                    <h1 class="display-5 text-dark text-center">Explore the The Future of Renewable Energy Sources</h1>
+                </div>
+            </div>
+
+
+            <!-- Blog Posts -->
+            <div class="content flex-grow-1 p-4">
+                <div class="container shadow-lg rounded bg-white">
+                    <!-- Gölge ve yuvarlatılmış köşeler eklendi -->
+                    <div class="row">
+                        @if (Model != null && Model.Any())
+                        {
+                            foreach (var blogPost in Model)
+                            {
+                                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 mt-3 ">
+                                    <div class="card h-100">
+                                        <img src="@blogPost.FeaturedImageUrl" alt="@blogPost.Heading" class="card-img-top img-fluid" style="height: 180px; object-fit: cover;" />
+                                        <div class="card-body p-3">
+                                            <h5 class="card-title">@blogPost.Heading</h5>
+                                            <small class="text-muted">Author: @blogPost.Author</small>
+                                            <p class="card-text mt-2 text-truncate">@blogPost.ShortDescription</p>
+                                            <a class="btn btn-sm btn-dark" asp-area="" asp-controller="Blogs" asp-action="Index" asp-route-urlHandle="@blogPost.UrlHandle">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
