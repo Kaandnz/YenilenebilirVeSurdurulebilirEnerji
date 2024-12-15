@@ -1,12 +1,14 @@
 ﻿@using Microsoft.AspNetCore.Identity
+
 @inject SignInManager<IdentityUser> signInManager
 
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Bloggie.Web</title>
+    <title>@ViewData[@Resource.HomePage] - @Resource.RenewableAndSustainableEnergy</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
@@ -20,7 +22,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Bloggie.Web</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">@Resource.RenewableAndSustainableEnergy</a>
                 <button class="navbar-toggler"
                         type="button"
                         data-bs-toggle="collapse"
@@ -33,21 +35,21 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">@Resource.HomePage</a>
                         </li>
                         @if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
 
                         {
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="adminDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Admin
+                                    @Resource.Admin
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="adminDropdown">
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="AdminTags" asp-action="Add">Add Tag</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="AdminTags" asp-action="List">Show All Tags</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="AdminBlogPosts" asp-action="Add">Add Blog Post</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="AdminBlogPosts" asp-action="List">All Blog Posts</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="AdminUsers" asp-action="List">All Users</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="AdminTags" asp-action="Add">@Resource.AddTag</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="AdminTags" asp-action="List">@Resource.ShowAllTags</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="AdminBlogPosts" asp-action="Add">@Resource.AddNewPost</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="AdminBlogPosts" asp-action="List">@Resource.AllPosts</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="AdminUsers" asp-action="List">@Resource.AllUsers</a></li>
                                 </ul>
                             </li>
                         }
@@ -61,7 +63,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="btn btn-outline-danger btn-sm ms-2 d-flex align-items-center gap-1" asp-area="" asp-controller="Account" asp-action="Logout">
-                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                    <i class="fas fa-sign-out-alt"></i> @Resource.Logout
                                 </a>
                             </li>
                         }
@@ -71,34 +73,74 @@
                         {
                             <li class="nav-item">
                                 <a class="btn btn-outline-primary btn-sm ms-2 d-flex align-items-center gap-1" asp-area="" asp-controller="Account" asp-action="Login">
-                                    <i class="fas fa-sign-in-alt"></i> Login
+                                    <i class="fas fa-sign-in-alt"></i> @Resource.Login
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="btn btn-outline-success btn-sm ms-2 d-flex align-items-center gap-1" asp-area="" asp-controller="Account" asp-action="Register">
-                                    <i class="fas fa-user-plus"></i> Register
+                                    <i class="fas fa-user-plus"></i> @Resource.Register
                                 </a>
                             </li>
                         }
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-globe"></i> 
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                                <li>
+                                    <form asp-controller="Home" asp-action="ChangeLanguage" asp-route-lang ="en">
+                                        <input type="hidden" name="culture" value="en" />
+                                        <button type="submit" class="dropdown-item">
+                                            @if (Thread.CurrentThread.CurrentCulture.ToString() == "en")
+                                            {
+                                                <p class="text-success">English</p>
+                                            }
+                                            else
+                                            {
+                                                 <p>English</p>
+                                            }
+                                        </button>
+                                    </form>
+                                </li>
+                                <li>
+                                    <form asp-controller="Home" asp-action="ChangeLanguage" asp-route-lang ="tr">
+                                        <input type="hidden" name="culture" value="tr" />
+                                        <button type="submit" class="dropdown-item">
+                                            @if (Thread.CurrentThread.CurrentCulture.ToString() == "tr")
+                                            {
+                                                <p class="text-success">Türkçe</p>
+                                            }
+                                            else
+                                            {
+                                                 <p>Türkçe</p>
+                                            }
+                                        </button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
                     </ul>
                 </div>
             </div>
         </nav>
+
     </header>
 
-    <!-- Main Content -->
     <main class="flex-grow-1 py-5 mt-3">
         @RenderBody()
     </main>
 
-    <!-- Footer -->
+
     <footer class="footer bg-light text-muted text-center ">
         <div class="container">
-            &copy; 2023 - Bloggie.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2024 - @Resource.RenewableAndSustainableEnergy - <a asp-area="" asp-controller="Home" asp-action="Privacy">@Resource.Privacy</a>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

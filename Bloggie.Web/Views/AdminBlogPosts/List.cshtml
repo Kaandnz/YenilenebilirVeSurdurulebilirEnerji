@@ -3,22 +3,22 @@
 @{
 }
 
-<div class="bg-secondary bg-opacity-10 py-2">
+<div class=" pt-4">
     <div class="container">
-        <h1>All BlogPosts - Admin Functionality</h1>
+        <h1>@Resource.AllPosts - @Resource.Admin </h1>
     </div>
 </div>
 
 
-<div class="container py-5">
+<div class="container pb-5 pt-3">
     @if (Model != null && Model.Any())
     {
         <table class="table">
             <thead>
                 <tr>
                     <td>Id</td>
-                    <td>Heading</td>
-                    <td>Tags</td>
+                    <td>@Resource.Heading</td>
+                    <td>@Resource.Tags</td>
                     <td> </td>
                 </tr>
             </thead>
@@ -41,7 +41,7 @@
                                asp-controller="AdminBlogPosts"
                                asp-action="Edit"
                                asp-route-id="@blogPost.Id">
-                                Edit
+                                @Resource.Edit
                             </a>
                         </td>
                     </tr>
@@ -51,7 +51,7 @@
     }
     else
     {
-        <p>No Blog Posts Found!</p>
+        <p>@Resource.NoPostFound</p>
     }
 
 </div>

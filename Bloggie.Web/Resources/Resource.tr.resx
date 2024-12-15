@@ -118,180 +118,180 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddNewPost" xml:space="preserve">
-    <value>Add New Post</value>
+    <value>Yeni Paylaşım Ekle</value>
   </data>
   <data name="AddNewTag" xml:space="preserve">
-    <value>Add New Tag - Admin</value>
+    <value>Yeni Etiket Ekle - Yönetici</value>
   </data>
   <data name="AddTag" xml:space="preserve">
-    <value>Add Tag</value>
+    <value>Yeni Etiket Ekle</value>
   </data>
   <data name="Admin" xml:space="preserve">
-    <value>Admin</value>
+    <value>Yönetici</value>
   </data>
   <data name="AdminRole" xml:space="preserve">
-    <value>Admin Role</value>
+    <value>Yönetici Rolü</value>
   </data>
   <data name="AllPosts" xml:space="preserve">
-    <value>All Posts</value>
+    <value>Tüm Paylaşımlar</value>
   </data>
   <data name="AllUsers" xml:space="preserve">
-    <value>All Users</value>
+    <value>Tüm Kullanıcılar</value>
   </data>
   <data name="Author" xml:space="preserve">
-    <value>Author</value>
+    <value>Yazar</value>
   </data>
   <data name="BiomassEnergy" xml:space="preserve">
-    <value>Biomass Energy</value>
+    <value>Biyokütle Enerjisi</value>
   </data>
   <data name="Close" xml:space="preserve">
     <value>Kapat</value>
   </data>
   <data name="Comments" xml:space="preserve">
-    <value>Comments</value>
+    <value>Yorum</value>
   </data>
   <data name="Content" xml:space="preserve">
-    <value>Content</value>
+    <value>İçerik</value>
   </data>
   <data name="CreateNewUser" xml:space="preserve">
-    <value>Create New User</value>
+    <value>Yeni Kullanıcı Oluştur</value>
   </data>
   <data name="CreateUser" xml:space="preserve">
-    <value>Create User</value>
+    <value>Kullanıcı Oluştur</value>
   </data>
   <data name="Delete" xml:space="preserve">
-    <value>Delete</value>
+    <value>Sil</value>
   </data>
   <data name="Edit" xml:space="preserve">
-    <value>Edit</value>
+    <value>Düzenle</value>
   </data>
   <data name="EditPost" xml:space="preserve">
-    <value>Edit Post - Admin</value>
+    <value>Paylaşımı Düzenle - Yönetici</value>
   </data>
   <data name="EditTag" xml:space="preserve">
-    <value>EditTag</value>
+    <value>Etiketi Düzenle - Yönetici</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>Email</value>
+    <value>E-Posta</value>
   </data>
   <data name="GeothermalEnergy" xml:space="preserve">
-    <value>Geothermal Energy</value>
+    <value>Jeotermal Enerji</value>
   </data>
   <data name="Heading" xml:space="preserve">
-    <value>Heading</value>
+    <value>Başlık</value>
   </data>
   <data name="HomePage" xml:space="preserve">
-    <value>Home Page</value>
+    <value>Ana Sayfa</value>
   </data>
   <data name="ImageURL" xml:space="preserve">
-    <value>Image URL</value>
+    <value>Resim URL</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>Login</value>
+    <value>Giriş Yap</value>
   </data>
   <data name="Logout" xml:space="preserve">
-    <value>Logout</value>
+    <value>Çıkış Yap</value>
   </data>
   <data name="NewPost" xml:space="preserve">
-    <value>Add New Post - Admin</value>
+    <value>Yeni Paylaşım Ekle - Yönetici</value>
   </data>
   <data name="Next" xml:space="preserve">
-    <value>Next</value>
+    <value>Sonraki</value>
   </data>
   <data name="NoPostFound" xml:space="preserve">
-    <value>No post found!</value>
+    <value>Paylaşım Bulunamadı ! </value>
   </data>
   <data name="NotAllowed" xml:space="preserve">
-    <value>You are not allowed to access this page!</value>
+    <value>Bu sayfaya erişiminiz yetkilendirilmedi!</value>
   </data>
   <data name="NoUserFound" xml:space="preserve">
-    <value>No users found!</value>
+    <value>Kullanıcı Bulunamadı !</value>
   </data>
   <data name="PageTitle" xml:space="preserve">
-    <value>Page Title</value>
+    <value>Sayfa Başlığı</value>
   </data>
   <data name="Password" xml:space="preserve">
-    <value>Password</value>
+    <value>Şifre</value>
   </data>
   <data name="Previous" xml:space="preserve">
-    <value>Previous</value>
+    <value>Önceki</value>
   </data>
   <data name="Privacy" xml:space="preserve">
-    <value>Privacy</value>
+    <value>Gizlilik</value>
   </data>
   <data name="PublishedDate" xml:space="preserve">
-    <value>Published Date</value>
+    <value>Yayınlanma Tarihi</value>
   </data>
   <data name="Register" xml:space="preserve">
-    <value>Register</value>
+    <value>Kayıt Ol</value>
   </data>
   <data name="RenewableAndSustainableEnergy" xml:space="preserve">
-    <value>Renewable and Sustainable Energy</value>
+    <value>Yenilenebilir ve Sürdürülebilir Enerji</value>
   </data>
   <data name="Save" xml:space="preserve">
-    <value>Save</value>
+    <value>Kaydet</value>
   </data>
   <data name="SaveChanges" xml:space="preserve">
-    <value>Save Changes</value>
+    <value>Değişiklikleri Kaydet</value>
   </data>
   <data name="Search" xml:space="preserve">
-    <value>Search</value>
+    <value>Ara</value>
   </data>
   <data name="ShortDsc" xml:space="preserve">
-    <value>Short Description</value>
+    <value>Kısa Açıklama</value>
   </data>
   <data name="ShowAllTags" xml:space="preserve">
-    <value>Show All Tags</value>
+    <value>Tüm Etiketleri Göster</value>
   </data>
   <data name="ShwAllTxt" xml:space="preserve">
-    <value>Show All Tags - Admin</value>
+    <value>Tüm Etiketleri Görüntüle - Admin</value>
   </data>
   <data name="SolarEnergy" xml:space="preserve">
-    <value>Solar Energy</value>
+    <value>Güneş Enerjisi</value>
   </data>
   <data name="Submit" xml:space="preserve">
-    <value>Submit</value>
+    <value>Gönder</value>
   </data>
   <data name="TagDisplayName" xml:space="preserve">
-    <value>Display Name</value>
+    <value>Görüntülenme Adı</value>
   </data>
   <data name="TagName" xml:space="preserve">
-    <value>Tag Name</value>
+    <value>Etiket Adı</value>
   </data>
   <data name="TagNotFound" xml:space="preserve">
-    <value>Tag not found!</value>
+    <value>Etiket Bulunamadı ! </value>
   </data>
   <data name="Tags" xml:space="preserve">
-    <value>Tags</value>
+    <value>Etiketler</value>
   </data>
   <data name="TheFutureOfRenewableEnergySources" xml:space="preserve">
-    <value>The Future of Renewable Energy Sources</value>
+    <value>Yenilenebilir Enerji Kaynaklarının Geleceği</value>
   </data>
   <data name="Update" xml:space="preserve">
-    <value>Update</value>
+    <value>Güncelle</value>
   </data>
   <data name="UploadImg" xml:space="preserve">
-    <value>Upload Image</value>
+    <value>Resim Yükle</value>
   </data>
   <data name="URLHandle" xml:space="preserve">
-    <value>URL Handle</value>
+    <value>URL Düzenle</value>
   </data>
   <data name="Username" xml:space="preserve">
-    <value>Username</value>
+    <value>Kullanıcı Adı</value>
   </data>
   <data name="UserRole" xml:space="preserve">
-    <value>User Role</value>
+    <value>Kullanıcı Rolü</value>
   </data>
   <data name="Users" xml:space="preserve">
-    <value>Users</value>
+    <value>Kullanıcılar</value>
   </data>
   <data name="Visible" xml:space="preserve">
-    <value>Visible</value>
+    <value>Görüntülenebilir mi?</value>
   </data>
   <data name="WaterEnergy" xml:space="preserve">
-    <value>Water Energy</value>
+    <value>Su Enerjisi</value>
   </data>
   <data name="WindEnergy" xml:space="preserve">
-    <value>Wind Energy</value>
+    <value>Rüzgar Enerjisi</value>
   </data>
 </root>

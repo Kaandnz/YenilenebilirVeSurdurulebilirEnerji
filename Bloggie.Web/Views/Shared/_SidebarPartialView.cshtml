@@ -1,0 +1,25 @@
+﻿
+<nav id="sidebarMenu" class="sidebar bg-white border-end flex-shrink-0" style="width: 250px;">
+    <div class="position-sticky">
+        <div class="list-group list-group-flush mx-3 mt-4">
+            <a asp-controller="Topics" asp-action="WaterEnergy" class="list-group-item list-group-item-action py-2 ripple">
+                <i class="fas fa-water fa-fw me-3"></i><span>@Resource.WaterEnergy</span>
+            </a>
+            <a asp-controller="Topics" asp-action="WindEnergy" class="list-group-item list-group-item-action py-2 ripple">
+                <i class="fas fa-wind fa-fw me-3"></i><span>@Resource.WindEnergy</span>
+            </a>
+            <a asp-controller="Topics" asp-action="SolarEnergy" class="list-group-item list-group-item-action py-2 ripple">
+                <i class="fas fa-sun fa-fw me-3"></i><span>@Resource.SolarEnergy</span>
+            </a>
+            <a asp-controller="Topics" asp-action="GeothermalEnergy" class="list-group-item list-group-item-action py-2 ripple">
+                <i class="fas fa-mountain fa-fw me-3"></i><span>@Resource.GeothermalEnergy</span>
+            </a>
+            <a asp-controller="Topics" asp-action="BiomassEnergy" class="list-group-item list-group-item-action py-2 ripple">
+                <i class="fas fa-leaf fa-fw me-3"></i><span>@Resource.BiomassEnergy</span>
+            </a>
+            <a asp-controller="Topics" asp-action="FutureEnergy" class="list-group-item list-group-item-action py-2 ripple">
+                <i class="fas fa-globe fa-fw me-3"></i><span>@Resource.TheFutureOfRenewableEnergySources</span>
+            </a>
+        </div>
+    </div>
+</nav>

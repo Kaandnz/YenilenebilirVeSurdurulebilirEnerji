@@ -5,9 +5,9 @@
     int prevPage = Convert.ToInt32(ViewBag.PageNumber) - 1;
 }
 
-<div class="bg-secondary bg-opacity-10 py-2">
+<div class="pt-4">
     <div class="container">
-        <h1>Show All Tags - Admin Functionality</h1>
+        <h1>@Resource.ShwAllTxt</h1>
     </div>
 </div>
 
@@ -20,7 +20,7 @@
             <div class="col col-md-3 d-flex">
                 <input type="text" class="form-control"
                        name="searchQuery" value="@ViewBag.SearchQuery" />
-                <button type="submit" class="btn btn-warning ms-3">Search</button>
+                <button type="submit" class="btn btn-warning ms-3">@Resource.Search</button>
             </div>
         </div>
     </div>
@@ -35,7 +35,7 @@
                 <tr>
                     <th>Id</th>
                     <th>
-                        Name
+                        @Resource.TagName
                         <span>
                             <span>
                                 <a class="btn btn-light"
@@ -61,7 +61,7 @@
 
                     </th>
                     <th>
-                        Display Name
+                        @Resource.TagDisplayName
                         <span>
                             <span>
                                 <a class="btn btn-light"
@@ -115,7 +115,7 @@
                        asp-route-pageSize="@ViewBag.PageSize"
                        asp-route-sortBy="@ViewBag.SortBy"
                        asp-route-sortDirection="@ViewBag.SortDirection">
-                        Previous
+                        @Resource.Previous
                     </a>
                 </li>
 
@@ -143,7 +143,7 @@
                        asp-route-pageSize="@ViewBag.PageSize"
                        asp-route-sortBy="@ViewBag.SortBy"
                        asp-route-sortDirection="@ViewBag.SortDirection">
-                        Next
+                        @Resource.Next
                     </a>
                 </li>
             </ul>
@@ -152,7 +152,7 @@
     }
     else
     {
-        <p>No tags found!</p>
+        <p>@Resource.TagNotFound</p>
     }
 </div>
 

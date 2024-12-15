@@ -1,47 +1,26 @@
 ﻿@model Bloggie.Web.Models.ViewModels.HomeViewModel
 
+
+
 @{
-    ViewData["Title"] = "Renewable Energy Home Page";
+    ViewData["Title"] = @Resource.HomePage;
 }
 
 <div class="d-flex flex-column min-vh-100">
     <div class="d-flex flex-grow-1">
         <!-- Sidebar -->
-        <nav id="sidebarMenu" class="sidebar bg-white border-end flex-shrink-0" style="width: 250px;">
-            <div class="position-sticky">
-                <div class="list-group list-group-flush mx-3 mt-4">
-                    <a asp-controller="Topics" asp-action="WaterEnergy" class="list-group-item list-group-item-action py-2 ripple">
-                        <i class="fas fa-water fa-fw me-3"></i><span>Water Energy</span>
-                    </a>
-                    <a asp-controller="Topics" asp-action="WindEnergy" class="list-group-item list-group-item-action py-2 ripple">
-                        <i class="fas fa-wind fa-fw me-3"></i><span>Wind Energy</span>
-                    </a>
-                    <a asp-controller="Topics" asp-action="SolarEnergy" class="list-group-item list-group-item-action py-2 ripple">
-                        <i class="fas fa-sun fa-fw me-3"></i><span>Solar Energy</span>
-                    </a>
-                    <a asp-controller="Topics" asp-action="GeothermalEnergy" class="list-group-item list-group-item-action py-2 ripple">
-                        <i class="fas fa-mountain fa-fw me-3"></i><span>Geothermal Energy</span>
-                    </a>
-                    <a asp-controller="Topics" asp-action="BiomassEnergy" class="list-group-item list-group-item-action py-2 ripple">
-                        <i class="fas fa-leaf fa-fw me-3"></i><span>Biomass Energy</span>
-                    </a>
-                    <a asp-controller="Topics" asp-action="FutureEnergy" class="list-group-item list-group-item-action py-2 ripple">
-                        <i class="fas fa-globe fa-fw me-3"></i><span>The FUTURE of Renewable Energy Sources</span>
-                    </a>
-                </div>
-            </div>
-        </nav>
+        <partial name="_SidebarPartialView" />
 
         <!-- Main Content -->
         <div class="content flex-grow-1 p-4">
             <!-- Carousel -->
             <div id="carouselExampleIndicators" class="carousel slide mb-5" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Water Energy"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Wind Energy"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Solar Energy"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Geothermal Energy"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Biomass Energy"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="@Resource.WaterEnergy"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="@Resource.WindEnergy"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="@Resource.SolarEnergy"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="@Resource.GeothermalEnergy"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="@Resource.BiomassEnergy"></button>
                 </div>
                 <div class="carousel-inner">
                     @foreach (var (topic, index) in new List<(string, int)>
@@ -92,10 +71,10 @@
                     <div class="row align-items-center g-5">
                         <div class="col-lg-8">
                             <h1 class="display-5 fw-bold">
-                                Welcome to Renewable & Sustainable Energy World
+                                Welcome
                             </h1>
                             <p class="lead">
-                                Discover the future of renewable energy sources! Learn about various renewable energy types including solar, wind, geothermal, biomass, and water energy. Get insights into how these sources are changing the world and shaping a sustainable future.
+                              Discover the future of renewable energy sources! Learn about various renewable energy types including solar, wind, geothermal, biomass, and water energy. Get insights into how these sources are changing the world and shaping a sustainable future.
                             </p>
                             <a href="#topics" class="btn btn-primary btn-lg">Explore Topics</a>
                         </div>

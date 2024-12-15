@@ -4,18 +4,18 @@
 }
 
 
-<div class="bg-secondary bg-opacity-10 py-2">
+<div class="pt-4">
     <div class="container">
-        <h1>Users - Admin Functionality</h1>
+        <h1>@Resource.Users - @Resource.Admin</h1>
     </div>
 </div>
 
 <div>
-    <div class="container py-5">
+    <div class="container pb-5 pt-3">
 
         <div class="mb-3 d-flex justify-content-end">
             <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalCreateUser">
-                Create User
+                @Resource.CreateUser
             </button>
         </div>
 
@@ -26,8 +26,8 @@
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Username</th>
-                        <th>Email</th>
+                        <th>@Resource.Username</th>
+                        <th>@Resource.Email</th>
                         <th> </th>
                     </tr>
                 </thead>
@@ -43,7 +43,7 @@
                                       asp-controller="AdminUsers" 
                                       asp-action="Delete" 
                                       asp-route-id="@user.Id">
-                                    <button class="btn btn-danger" type="submit">Delete</button>
+                                    <button class="btn btn-danger" type="submit">@Resource.Delete</button>
                                 </form>
                             </td>
                         </tr>
@@ -53,7 +53,7 @@
         }
         else
         {
-            <p>No users found!</p>
+            <p>@Resource.NoUserFound</p>
         }
 
 
@@ -68,26 +68,26 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create New User</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">@Resource.CreateNewUser</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label class="form-label">Username</label>
+                        <label class="form-label">@Resource.Username</label>
                         <input type="text" class="form-control" asp-for="Username" />
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Email Address</label>
+                        <label class="form-label">@Resource.Email</label>
                         <input type="text" class="form-control" asp-for="Email" />
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Password</label>
+                        <label class="form-label">@Resource.Password</label>
                         <input type="password" class="form-control" asp-for="Password" />
                     </div>
                     <div class="mb-3">
                         <div class="form-check">
                             <input type="checkbox" id="chkUserRole" class="form-check-input" value="User" checked disabled />
-                            <label class="form-check-label" for="chkUserRole">User Role</label>
+                            <label class="form-check-label" for="chkUserRole">@Resource.UserRole</label>
                         </div>
 
                         @if (User.IsInRole("SuperAdmin"))
@@ -95,15 +95,15 @@
                             <div class="form-check">
                                 <input type="checkbox" id="chkAdminRole" class="form-check-input"
                                        asp-for="AdminRoleCheckbox" />
-                                <label class="form-check-label" for="chkAdminRole">Admin Role</label>
+                                <label class="form-check-label" for="chkAdminRole">@Resource.AdminRole</label>
                             </div>
                         }
 
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@Resource.Close</button>
+                    <button type="submit" class="btn btn-primary">@Resource.SaveChanges</button>
                 </div>
             </div>
         </div>

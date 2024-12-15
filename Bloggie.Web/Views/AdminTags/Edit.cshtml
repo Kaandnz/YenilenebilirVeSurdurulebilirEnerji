@@ -2,14 +2,14 @@
 @{
 }
 
-<div class="bg-secondary bg-opacity-10 py-2">
+<div class="pt-4">
     <div class="container">
-        <h1>Edit Tag - Admin Functionality</h1>
+        <h1>@Resource.EditTag </h1>
     </div>
 </div>
 
 
-<div class="container py-5">
+<div class="container pb-5 pt-3">
     @if (Model != null)
     {
         <form method="post">
@@ -20,25 +20,25 @@
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Name</label>
+                <label class="form-label">@Resource.TagName</label>
                 <input type="text" id="name" class="form-control" asp-for="Name" />
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Display Name</label>
+                <label class="form-label">@Resource.TagDisplayName</label>
                 <input type="text" id="displayName" class="form-control" asp-for="DisplayName" />
             </div>
 
             <div class="mb-3">
 
                 <div class="d-flex">
-                    <button type="submit" class="btn btn-dark">Update</button>
+                    <button type="submit" class="btn btn-dark">@Resource.Update</button>
 
                     <button class="btn btn-danger ms-2" type="submit"
                             asp-area=""
                             asp-controller="AdminTags"
                             asp-action="Delete">
-                        Delete
+                        @Resource.Delete
                     </button>
 
                 </div>
@@ -49,6 +49,6 @@
     }
     else
     {
-        <p>Tag not found!</p>
+        <p>@Resource.TagNotFound</p>
     }
 </div>
